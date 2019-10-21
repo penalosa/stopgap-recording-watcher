@@ -6,7 +6,7 @@ let info = {}
 const moment = require("moment")
 const s3 = require("s3")
 let uploadQueue = []
-const secrets = require("./secrets")
+const secrets = require("./secrets/secrets")
 let client = s3.createClient({
     s3Options: {
         ...secrets,
