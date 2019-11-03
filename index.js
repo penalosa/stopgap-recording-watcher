@@ -93,7 +93,7 @@ const doUpload = async () => {
     try {
       await upload(file, ident, time);
       console.log("Uploaded", file);
-      // await fs.promises.unlink(file)
+      await fs.promises.unlink(file);
     } catch (e) {
       console.error("Failed", file, e);
       uploadQueue.push(file);
